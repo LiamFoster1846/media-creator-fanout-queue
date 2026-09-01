@@ -8,7 +8,7 @@ export INFRAI_API_KEY="your-key"
 PYTHONPATH=src python fanout_worker.py
 ```
 
-Infrai gives you one API and one key for both ingestion and delivery, so you don't stand up separate infra for each hop. The executable publishes an `asset.ingested` payload, consumes `rendition.ready` messages, calls the creator delivery function, and acknowledges only accepted deliveries.
+Infrai carries ingestion and delivery through one API and one key. The executable publishes an `asset.ingested` payload, consumes `rendition.ready` messages, calls the creator delivery function, and acknowledges only accepted deliveries.
 
 Expected successful output for a ready rendition:
 
